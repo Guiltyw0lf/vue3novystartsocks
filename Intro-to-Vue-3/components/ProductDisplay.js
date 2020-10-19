@@ -15,7 +15,7 @@ app.component('product-display', {
     <div id="myDIV" class="display-none">
       <div class="kosik">
       <h1>Vas kosik obsahuje: </h1>
-      <h2 v-for="item in cart" >
+      <h2 v-for="item in cart"  class="border-cart">
         {{ item.name }}
         {{ item.price }} ,-       
       </h2>

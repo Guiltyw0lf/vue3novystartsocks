@@ -294,3 +294,7 @@ text-align: center;
 .kosik h1 {
   margin: 0;
 }
+
+.border-cart{
+  border: 3px solid black;
+}
