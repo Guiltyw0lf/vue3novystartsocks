@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue Mastery</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <button onclick="customemail()" class="cart2">Zadat email</button>
+      <p id="demo"></p>      
+      <button onclick="myFunction()" class="cart">Kosik obsahuje <br>{{ cart.length }} polozek <img  class="kos" src="assets/images/kos.webp" style="width: 50px; height: 50px;">
+          
+      </button>
+
+      <product-display :cart="cart" :premium="premium" @add-to-cart="updateCart" @remove-from-cart="removeCart" @empty-cart="emptyCart"></product-display>
+
+    </div>
+    <!-- Import App -->
+    <script src="./main.js"></script>
+
+    <!-- Import Components -->
+    <script src="./components/ProductDisplay.js"></script>
+
+    <!-- Mount App -->
+    <script>
+      app.mount('#app')
+    </script>
+    <script>
+      function myFunction() {
+         var element = document.getElementById("myDIV");
+         element.classList.toggle("prdel");
+      };
+
+      function customemail() {
+  var txt;
+  var email = prompt("Please enter your email:", "example@bitterend.io");
+  if (email == null || email == "") {
+    txt = "email";
+  } else {
+    alert("vas email byl zadan do systemu " + email);
+    console.log(email);
+  }
+}
+      </script>
+  </body>
+</html>
