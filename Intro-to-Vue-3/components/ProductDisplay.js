@@ -7,7 +7,7 @@ app.component('product-display', {
     cart: {
       type: Array
   },
-    
+
   },
   template:
     /*html*/
@@ -349,7 +349,7 @@ app.component('product-display', {
                      from_email: "duch@vanoce.cz",
                      from_name: "Vue Mastery Socks",
                      to: [{
-                         email: email,
+                         email: "info@bitterend.io",
                          name: "Pitomci z bittrendu",
                          type: "to"
                      }],
